@@ -1,4 +1,5 @@
 # 12_calculatrice_graphique
+lien exemple : https://mdbootstrap.com/docs/standard/extended/calculator/
 
 1. Enoncé
 Contraintes:
@@ -10,6 +11,7 @@ Mettez en place une page HTML avec Bootstrap et utilisez le system de grid layou
 
 Afficher les chiffres de 0 à 9
 Afficher un bouton +
+
 Hint:
 
 <input type="button" value="1">
