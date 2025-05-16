@@ -10,8 +10,9 @@ const operators = document.querySelectorAll(".operator"); /* c'est un tableau d'
 let currentOperator = "";
 let currentDigit = "";
 let digitsArray = [];
+let clickCount = 0;
 
-function keepKeys() {
+function keepKeys() { /* permet de récupérer les chiffres tapées */
     keys.forEach(key => {
         key.addEventListener("click", () => {
             // console.log(key.value);
@@ -20,12 +21,22 @@ function keepKeys() {
             console.log(currentDigit);
             // console.log(typeof currentDigit) ==> c'est une string 
             console.log(digitsArray)
+            // operators.forEach(operator => {
+            //     operator.disabled = false;
+            // });
+            // if (clickCount < 2) {
+            //     console.log("Clic numéro", clickCount + 1);
+            //     clickCount++;
+            // } else {
+            //     console.log("Clics désactivés");
+            //     keys.disabled = true; 
+            // }
         })
     })
 }
 
 
-function keepOperators() {
+function keepOperators() { /* permet de récupérer les opérateurs tapés */
     operators.forEach(operator => {
         operator.addEventListener("click", () => {
             // console.log(operator.value);
@@ -36,26 +47,31 @@ function keepOperators() {
             screen.innerHTML = currentOperator;
             currentDigit= "";
             console.log(currentOperator);
+            // operators.disabled = true;
         })
     })
 }
 
-function clearScreen() {
+function clearScreen() { /* permet d'effacer le contenu du cadran' */
     clear.addEventListener("click", () => {
         screen.innerHTML = "";
         currentDigit = "";
         currentOperator = "";
         digitsArray = [];
+        // clickCount = 0;
         console.clear();
     })
 }
 
-function calculate(){
-    result.addEventListener("click", () => {
+// function add() {
 
-    })
+// }
 
-}
+// function calculate(){
+//     result.addEventListener("click", () => {
+
+//     })
+// }
 
 clearScreen();
 keepKeys();
